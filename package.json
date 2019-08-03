@@ -2,6 +2,7 @@
   "name": "movie_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jimmyahn.github.io/movie_app/build",
   "dependencies": {
     "gh-pages": "^2.1.0",
     "react": "^16.8.6",
@@ -9,13 +10,12 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
-    "clean-source": "rimraf README.md src webroot package.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,8 +32,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://jimmyahn.github.io/movie_app",
   "devDependencies": {
-    "gh-pages-deploy": "^0.5.1"
+    "push-dir": "^0.4.1"
   }
 }
